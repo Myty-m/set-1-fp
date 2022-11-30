@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 internal class Program
 {
@@ -633,7 +633,6 @@ internal class Program
                     Console.Write("0");
                 while (true)
                 {
-                    
                     if (pc == r * 10 / n)
                         break;
                     if (pc == -1)
@@ -643,13 +642,43 @@ internal class Program
                     
                 }
             }
-                
             if (prs)
                 Console.Write($"{aux})");
+            int aux2 = -1; 
+            aux = 0;
             if (prx)
+            {
+                while (true)
+                {
+                    
+                if (aux2 == -1)
+                    aux2 = r * 10 / n;
+                aux = aux * 10 + r * 10 / n;
+                r = r * 10 % n;
+                Console.Write(aux2); 
+                    if (aux2 != r * 10 / n)
+                        break;
+                }
+            }
+                Console.Write("(");
+            aux = 0;
+            pc = -1;
+                while (true)    
+                {
+                    if (pc == r * 10 / n)
+                        break;
+                    if (pc == -1)
+                            pc = r * 10 / n;
+                    aux = aux * 10 + r * 10 / n;
+                    r = r * 10 % n;
 
-                ;
-                    }
+                }
+                Console.Write($"{aux})");
+
+            }
+
+               
+                    
         void p21()
         {
             //sunt sanse ca folosind random number sa avem mult prea multe intrebari
